@@ -1,26 +1,20 @@
 export const slides = [
   {
     id: '1',
-    title: 'Page 1',
-    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+    title: 'Exemplo básico',
+    description: 'Esse é um exemplo básico de como criar um Onboarding com React Native',
     image: require('../assets/images/image1.png'),
   },
   {
     id: '2',
-    title: 'Page 2',
-    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry2.',
+    title: 'Comum em apps',
+    description: 'Onboarding é algo comum em Apps.',
     image: require('../assets/images/image2.png'),
   },
   {
     id: '3',
-    title: 'Page 3',
-    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry3.',
+    title: 'Primeiro acesso',
+    description: 'Exibe apenas uma vez para o usuário. Ao prosseguir não irá mostrar mais.',
     image: require('../assets/images/image3.png'),
-  },
-  {
-    id: '4',
-    title: 'Page 4',
-    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry4.',
-    image: require('../assets/images/image4.png'),
   },
 ]
