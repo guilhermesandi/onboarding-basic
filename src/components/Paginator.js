@@ -36,7 +36,7 @@ export function Paginator({ data, scrollX }) {
   );
 }
 
-export const styles = StyleSheet.create({
+const styles = StyleSheet.create({
   dot: {
     height: 10,
     borderRadius: 5,

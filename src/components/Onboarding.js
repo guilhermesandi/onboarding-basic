@@ -3,6 +3,7 @@ import { StyleSheet, View, FlatList, Animated } from 'react-native';
 
 import { OnboardingItem } from './OnboardingItem';
 import { Paginator } from './Paginator';
+import { NextButton } from './NextButton';
 import { slides } from '../utils/slides';
 
 export function Onboarding() {
@@ -38,6 +39,7 @@ export function Onboarding() {
       </View>
 
       <Paginator data={slides} scrollX={scrollX} />
+      <NextButton percentage={(currentIndex + 1) * (100 / slides.length)} />
     </View>
   );
 }
