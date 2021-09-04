@@ -17,6 +17,14 @@ export function Onboarding() {
 
   const viewConfig = useRef({ viewAreaCoveragePercentThreshold: 50 }).current;
 
+  const scrollTo = () => {
+    if (currentIndex < slides.length - 1) {
+      slidesRef.current.scrollToIndex({ index: currentIndex + 1 });
+    } else {
+      console.log('Last item');
+    }
+  };
+
   return (
     <View style={styles.container}>
       <View style={{ flex: 3 }}>
@@ -39,7 +47,7 @@ export function Onboarding() {
       </View>
 
       <Paginator data={slides} scrollX={scrollX} />
-      <NextButton percentage={(currentIndex + 1) * (100 / slides.length)} />
+      <NextButton scrollTo={scrollTo} percentage={(currentIndex + 1) * (100 / slides.length)} />
     </View>
   );
 }

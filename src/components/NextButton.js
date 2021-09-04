@@ -3,7 +3,7 @@ import { View, StyleSheet, TouchableOpacity, Animated } from 'react-native';
 import Svg, { G, Circle } from 'react-native-svg';
 import { AntDesign } from '@expo/vector-icons';
 
-export function NextButton({ percentage }) {
+export function NextButton({ percentage, scrollTo }) {
   const size = 128;
   const strokeWidth = 2;
   const center = size / 2;
@@ -35,7 +35,11 @@ export function NextButton({ percentage }) {
         })
       }
     })
-  }, [percentage])
+
+    return () => {
+      progressAnimation.removeAllListeners();
+    };
+  }, [])
 
   return (
     <View style={styles.container}>
@@ -59,7 +63,11 @@ export function NextButton({ percentage }) {
           />
         </G>
       </Svg>
-      <TouchableOpacity style={styles.button} activeOpacity={0.6}>
+      <TouchableOpacity
+        onPress={scrollTo}
+        style={styles.button}
+        activeOpacity={0.6}
+      >
         <AntDesign
           name="arrowright"
           size={32}
